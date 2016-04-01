@@ -22,7 +22,7 @@ void menu_select_patches()
     #endif
 
     if (cake_count <= 0) {
-        draw_message("No cakes loaded", "No cakes have been loaded.\nPlease copy them to: " PATH_PATCHES);
+        draw_message("No DLC loaded", "No DLC has been loaded.\nPlease copy them to: " PATH_PATCHES);
         return;
     }
 
@@ -31,7 +31,7 @@ void menu_select_patches()
         options[i] = cake_list[i].description;
     }
 
-    int *result = draw_selection_menu("Select your cakes", cake_count, options, cake_selected);
+    int *result = draw_selection_menu("Select your DLC", cake_count, options, cake_selected);
 
     patches_modified |= memcmp(cake_selected, result, sizeof(cake_selected));
 
@@ -130,7 +130,7 @@ void menu_more()
 
 void version_info()
 {
-    int pos_y = draw_loading("Version info", "CakesFW version " CAKES_VERSION) + SPACING_VERT;
+    int pos_y = draw_loading("Version info", "Dynamic Loading Content version " ) + SPACING_VERT;
     int version_pos_x = 10 + SPACING_HORIZ * 21;
 
     draw_string(screen_top_left, "NATIVE_FIRM version:", 10, pos_y, COLOR_NEUTRAL);
@@ -157,10 +157,10 @@ void menu_main()
 {
     while (1) {
         char *options[] = {"Boot CFW",
-                           "Select Patches",
+                           "Select Content",
                            "More options...",
                            "Version info"};
-        int result = draw_menu("CakesFW " CAKES_VERSION, 0, sizeof(options) / sizeof(char *), options);
+        int result = draw_menu("Dynamic Loading Content CFW " , 0, sizeof(options) / sizeof(char *), options);
 
         switch (result) {
             case 0:
@@ -221,9 +221,9 @@ void main()
     // This function already correctly draws error messages
     if (load_firms() != 0) return;
 
-    print("Loading cakes");
+    print("Loading CFW");
     if (load_cakes_info(PATH_PATCHES) != 0) {
-        draw_loading("Failed to read some cakes", "Make sure your cakes are up to date\n  and your SD card can be read correctly");
+        draw_loading("Failed to read some DLC", "Make sure your DLC is up to date\n  and your SD card can be read correctly");
         return;
     }
 

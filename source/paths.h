@@ -3,7 +3,7 @@
 // A file to keep track of all the file paths used throughout cakes.
 
 // The "topdir"
-#define PATH_CAKES "/cakes"
+#define PATH_CAKES "/dlc"
 
 #define PATH_FIRMWARE PATH_CAKES "/firmware.bin"
 #define PATH_PATCHED_FIRMWARE PATH_CAKES "/firmware_patched.bin"

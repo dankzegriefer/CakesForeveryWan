@@ -26,7 +26,7 @@ CFLAGS := -MMD -MP -marm $(ASFLAGS) -fno-builtin -fshort-wchar -Wall -Wextra -O2
 CAKEFLAGS := dir_out=$(abspath $(dir_out))
 BRAHFLAGS := dir_out=$(abspath $(dir_out)/3ds/Cakes) \
 			 APP_DESCRIPTION="CFW for 3DS" \
-			 APP_AUTHOR="mid-kid" \
+			 APP_AUTHOR="dank101" \
 			 ICON=$(abspath icon.png)
 
 objects_cfw = $(patsubst $(dir_source)/%.s, $(dir_build)/%.o, \

@@ -63,7 +63,7 @@ void load_config_cakes()
         }
     }
 
-    print("Loaded selected cakes");
+    print("Loaded selected DLC");
 }
 
 void save_config()

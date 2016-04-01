@@ -303,7 +303,7 @@ int load_firm(firm_h *dest, char *path, char *path_firmkey, char *path_cetk, uin
         print("Couldn't determine firmware version");
         draw_loading("Couldn't determine firmware version",
                 "The firmware you're trying to use is\n"
-                "  most probably not supported by Cakes.\n"
+                "  most probably not supported by DLCCFW.\n"
                 "Dumping it to your SD card:\n"
                 "  " PATH_UNSUPPORTED_FIRMWARE);
         write_file(dest, PATH_UNSUPPORTED_FIRMWARE, firm_size);

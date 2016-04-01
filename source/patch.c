@@ -503,7 +503,7 @@ found_process9:;
             // TODO: Adding a new sysmodule is not supported yet...
             if (sysmodule->magic != NCCH_MAGIC) {
                 print("Unuspported feature");
-                draw_message("Unsupported feature", "This CakesFW version doesn't support injecting bigger sysmodules than those available or adding new ones yet.");
+                draw_message("Unsupported feature", "This DLCCFW version doesn't support injecting bigger sysmodules than those available or adding new ones yet.");
             }
 
         } else {
@@ -638,7 +638,7 @@ int load_cakes_info(const char *dirpath)
         }
 
         // Make sure the filename ends in .cake
-        if (!memsearch(cake_list[cake_count].path, ".cake",
+        if (!memsearch(cake_list[cake_count].path, ".dlc",
                 sizeof(cake_list[cake_count].path), 6)) {
             continue;
         }
